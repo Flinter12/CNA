@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue"
+    tools:context=".bort">
+
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/logo"/>
+
+        <Button
+            android:id="@+id/buttonticket"
+            android:layout_marginLeft="125dp"
+            android:layout_width="110dp"
+            android:layout_height="35dp"
+            android:text="Купить билет"
+            android:textAllCaps="false"
+            android:backgroundTint="#F37B09"
+            android:textColor="#FFF"
+            android:textSize="12sp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:drawablePadding="6dp"
+            app:cornerRadius="5dp"/>
+
+        <ImageView
+            android:id="@+id/settings"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/settings"
+            android:layout_marginStart="20dp"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageView
+            android:id="@+id/profileverh"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/profile"
+            android:layout_marginStart="10dp"
+            android:clickable="true"
+            android:focusable="true"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topBar"
+        android:layout_above="@id/bottomNavigation"
+        android:background="@drawable/rounded_scroll_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/rounded_white"
+                android:padding="2dp"
+                android:gravity="center_vertical">
+
+                <AutoCompleteTextView
+                    android:id="@+id/searchEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:hint="Поиск"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="36dp"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/dark_blue"
+                    android:textColorHint="@color/dark_blue"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:inputType="text"
+                    android:completionThreshold="1"/>
+
+                <Button
+                    android:id="@+id/searchButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Найти"
+                    android:textSize="12sp"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#F37B09"
+                    android:textAllCaps="false"
+                    android:minWidth="70dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    app:cornerRadius="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="8dp" />
+            </LinearLayout>
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <Button
+                        android:id="@+id/buttonInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:backgroundTint="@color/dark_blue"
+                        android:paddingHorizontal="16dp"
+                        android:text="Информация"
+                        android:textAllCaps="false"
+                        android:textColor="#FFF"
+                        app:cornerRadius="9dp" />
+
+                    <Button
+                        android:id="@+id/buttonService"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:backgroundTint="@color/dark_blue"
+                        android:paddingHorizontal="16dp"
+                        android:text="Сервисы и услуги"
+                        android:textAllCaps="false"
+                        android:textColor="#FFF"
+                        app:cornerRadius="9dp" />
+
+                    <Button
+                        android:id="@+id/buttonSpec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/dark_blue"
+                        android:paddingHorizontal="16dp"
+                        android:text="Спецпредложения"
+                        android:textAllCaps="false"
+                        android:textColor="#FFF"
+                        app:cornerRadius="9dp" />
+                </LinearLayout>
+            </HorizontalScrollView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="На борту"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/dark_blue"
+                android:layout_marginTop="16dp" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:text="Мы заботимся о вашем комфорте! На борту предоставляются удобства для всех пассажиров, включая горячее питание, бесплатные напитки, развлечения на экране, а также доступ к Wi-Fi. Все пассажиры могут воспользоваться нашим бортовым обслуживанием, чтобы сделать путешествие максимально приятным.\n\nЕсли у вас возникли вопросы, не стесняйтесь обратиться к бортпроводнику. Мы всегда готовы помочь!"
+                android:textColor="@color/dark_blue"
+                android:textIsSelectable="false"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/airplane" />
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="@color/nav_icon_color"
+        app:itemTextColor="@color/nav_icon_color"
+        android:background="@color/dark_blue"
+        app:labelVisibilityMode="labeled"
+        />
+</RelativeLayout>

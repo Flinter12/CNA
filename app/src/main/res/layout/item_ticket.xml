@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="16dp"
+    android:background="@drawable/rounded_white"
+    android:padding="12dp">
+
+    <!-- Заголовок блока -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Информация о билете"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/orange"
+        android:paddingBottom="8dp"/>
+
+    <!-- Пункт отправления -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Пункт отправления"
+        android:textColor="@color/dark_blue"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/routeText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Route"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:paddingTop="4dp"
+        android:paddingBottom="10dp"/>
+
+    <!-- Место -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Место"
+        android:textColor="@color/dark_blue"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/seatText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Место"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:paddingBottom="8dp"/>
+
+    <!-- Цена -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Цена"
+        android:textColor="@color/dark_blue"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/priceText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Цена"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:paddingBottom="8dp"/>
+
+    <!-- Класс -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Класс"
+        android:textColor="@color/dark_blue"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/classText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Класс"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:paddingBottom="8dp"/>
+
+    <!-- Дата -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Дата"
+        android:textColor="@color/dark_blue"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/dateText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Дата"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:paddingBottom="8dp"/>
+
+    <!-- Кнопка "В корзину" -->
+    <Button
+        android:id="@+id/addToCartButton"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="6dp"
+        android:text="В корзину"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#F37B09"
+        android:textAllCaps="false"
+        app:cornerRadius="8dp"
+       />
+
+</LinearLayout>
